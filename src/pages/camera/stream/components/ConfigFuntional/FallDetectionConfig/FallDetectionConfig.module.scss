@@ -1,0 +1,96 @@
+.color_red {
+    color: gray;
+    // background-color: green;
+}
+
+.wraper {
+    background-color: #fff;
+    // margin-left: 16px;
+
+    &__status {
+        padding: 8px 0;
+        margin-left: 8px;
+        &__test {
+            font-weight: 600;
+            font-size: 14px;
+        }
+    }
+    &__form {
+        margin-left: 8px;
+        &__header {
+            margin-bottom: 16px;
+        }
+        &__button {
+            align-self: center;
+            margin-top: 4px;
+        }
+        &__draw_btn {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        &__config_time {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    // max-width: 90%;
+    // max-height: 90%;
+    animation: scale-in-center 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    &__image {
+        max-width: 100%;
+        height: auto;
+        margin: auto;
+        display: block;
+    }
+
+    @keyframes scale-in-center {
+        0% {
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+.modal__wrapper {
+    position: relative;
+    // .video-action {
+    //   position: absolute;
+    //   right: 0;
+    //   top: 0;
+    //   z-index: 999;
+    // }
+    :global(.konvajs-content) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+    img {
+        width: 100%;
+    }
+    .modal__stage {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

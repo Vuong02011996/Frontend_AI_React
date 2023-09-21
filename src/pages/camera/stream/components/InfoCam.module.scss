@@ -1,0 +1,36 @@
+.wraper {
+    background-color: #fff;
+    // margin-left: 8px;
+}
+.info_header {
+    color: #ccc;
+    background-color: #343541;
+    padding: 8px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.select {
+    width: 100%;
+    &_option {
+        color: #343541;
+    }
+}
+
+.row_info {
+    // border-bottom: 1px solid #ccc;
+    margin-bottom: 16px;
+}
+
+// 3 Dùng mixin
+@mixin contentTextStyle {
+    font-size: 14px;
+    color: #000;
+}
+
+.info_content {
+    margin-left: 8px;
+    &_text {
+        @include contentTextStyle();
+    }
+}

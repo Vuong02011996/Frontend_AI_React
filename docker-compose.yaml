@@ -1,0 +1,20 @@
+version: '3.2'
+services:
+  web:
+    image: kun391/nino:2.0
+    ports:
+      - '${WEB_PORT}:80'
+    working_dir: /usr/var/app
+    volumes:
+      - .:/usr/var/app
+      - ./dist:/usr/share/nginx/html:ro
+      - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf
+    command:
+      - /bin/bash
+      - -c
+      - |
+        service nginx restart
+        tail -f /dev/null 2>&1
+    environment:
+      NODE_OPTIONS: '--max-old-space-size=4096'
+    restart: on-failure

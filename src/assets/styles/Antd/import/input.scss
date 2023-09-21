@@ -1,0 +1,161 @@
+// Import mixins
+@import '@/assets/styles/mixins.scss';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/*  ANT DESIGN INPUT */
+
+.ant-input-disabled {
+  background: $gray-lighten-more-more;
+}
+
+.input-number {
+  &.ant-input-number {
+    width: 100%;
+  }
+}
+
+.input-login {
+  .ant-input {
+    height: 44px;
+    border-radius: 6px;
+    border: 1px solid #d6ebdf;
+  }
+}
+
+.input-password {
+  .ant-input-password {
+    height: 44px;
+    border-radius: 6px;
+    border: 1px solid #d6ebdf;
+    .ant-input {
+      height: auto;
+    }
+  }
+}
+
+.radio-custom {
+  display: flex;
+  align-items: center;
+  .ant-radio-wrapper {
+    display: flex;
+    align-items: center;
+    padding-right: 0px;
+    .ant-radio {
+      > input {
+        width: 22px;
+        height: 22px;
+      }
+
+      .ant-radio-inner {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+.ant-checkbox-wrapper {
+  font-size: 14px;
+  line-height: 20px;
+  color: #36383a;
+  .ant-checkbox-inner {
+    width: 24px;
+    height: 24px;
+    &::after {
+      left: 30%;
+    }
+  }
+}
+
+.ant-radio-wrapper {
+  display: inline-flex;
+  .ant-radio-inner {
+    width: 24px;
+    height: 24px;
+    &::after {
+      top: 5px;
+      left: 5px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+.checkbox-large {
+  .ant-checkbox-wrapper {
+    font-size: 13px;
+    line-height: 22px;
+    color: $text;
+  }
+  .ant-checkbox-inner {
+    width: 32px;
+    height: 32px;
+    &::after {
+      left: 35%;
+    }
+  }
+}
+
+.checkbox-group-container {
+  .ant-checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .ant-checkbox-wrapper {
+    width: calc(100% / 3);
+    margin: 10px 0;
+  }
+}
+
+.input-disabled {
+  .ant-input {
+    color: $text-dark;
+  }
+}
+
+.ant-input-disabled {
+  color: $text-dark !important;
+}
+
+.ant-switch-checked {
+  background-color: $background-success;
+}
+
+.ant-checkbox-indeterminate {
+  .ant-checkbox-inner {
+    width: 24px;
+    height: 24px;
+    &::after {
+      left: 50%;
+      width: 13px;
+      height: 13px;
+    }
+  }
+}
+
+.radio-group-row {
+  .radio-custom {
+    display: flex;
+    flex-wrap: wrap;
+    .ant-radio-wrapper {
+      margin: 0;
+      margin-right: 50px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.upload-container {
+  width: 80px;
+  height: 80px;
+  background-color: #fafafa;
+  border: 1px dashed #cecece;
+  box-sizing: border-box;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

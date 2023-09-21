@@ -1,0 +1,109 @@
+// Colors
+$white: #fff;
+
+$text: #394351;
+$text-white: #ffffff;
+$text-dark: #000000;
+$text-darken: #615d7c;
+$text-orange: #fa8c16;
+$text-yellow: #fa8c16;
+$text-danger: #ff4d4f;
+$text-lighten: #c0bdd0;
+$text-primary: #1890ff;
+$text-darken-more: #514d6a;
+$text-success: #27a600;
+$text-green: #169b4b;
+$text-purple: #0000ff;
+$text-form-label: #36383a;
+
+// background
+$background-success: #27a600;
+$background-white: #fff;
+$background-danger: #ff4d4f;
+$background-dark: #001525;
+$background-yellow: #de5e00;
+$background-primary: #3b5cad;
+$background-gray: #e5e5e5;
+$background-green: #169b4b;
+$background-purple: #0000ff;
+$background-table: #d6dded;
+
+// border
+$border-primary: rgba(24, 144, 255, 0.5);
+$border-success: #27a600;
+$border-danger: #ff4d4f;
+$border-yellow: #de5e00;
+$border-lighten: #d9d9d9;
+$border-dark: #514d6a;
+$border-gray: #d9d9d9;
+$border-white: #ffffff;
+$border-green: #169b4b;
+$border-purple: #0000ff;
+$border-line: #eaeaea;
+
+// icon sidebar
+$icon-sidebar: #c4c4c4;
+
+$gray: #d2d9e5;
+$gray-darken: #b8beca;
+$gray-border: #e4e9f0;
+$gray-lighten: #eef0f4;
+$gray-lighten-more: #f2f4f8;
+$gray-lighten-more-more: #f9fafc;
+
+$black: #0e0b20;
+$black-lighten: #222034;
+$black-lighten-more: #393749;
+
+$blue: #08f;
+$yellow: #ff0;
+$orange: #f2a654;
+$blue-darken: #0072d6;
+
+$menuBg: #001529;
+$menuBg-darken: #000c17;
+
+// Accent colors
+$info: #0887c9;
+$danger: #fb434a;
+$default: #acb7bf;
+$primary: #0190fe;
+$success: #27a600;
+$warning: #f39834;
+$secondary: #6a7a84;
+
+// Convert value rem() sass mixin
+@function rem($px, $base: 13) {
+  @return #{floor(($px/$base) * 100) / 100}rem; // to REMs
+  // comment code above and uncomment below for change REMs to PXs
+  //@return #{$px}px;
+}
+
+// Transitions
+@mixin transition-fast() {
+  transition: all 0.05s ease-in-out;
+}
+@mixin transition-middle() {
+  transition: all 0.1s ease-in-out;
+}
+@mixin transition-slow() {
+  transition: all 0.2s ease-in-out;
+}
+@mixin transition-very-slow() {
+  transition: all 0.4s ease-in-out;
+}
+@mixin transition-color() {
+  transition: color 0.2s ease-in-out;
+}
+
+// Responsive utils
+$xxl-min-width: 1600px;
+$xxl-max-width: 1599px;
+$xl-min-width: 1366px;
+$xl-max-width: 1199px;
+$md-min-width: 992px;
+$md-max-width: 991px;
+$sm-min-width: 768px;
+$sm-max-width: 767px;
+$xs-min-width: 576px;
+$xs-max-width: 575px;

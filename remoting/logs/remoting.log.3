@@ -1,0 +1,33 @@
+Aug 06, 2023 12:07:28 AM hudson.slaves.ChannelPinger$1 onDead
+INFO: Ping failed. Terminating the channel channel.
+java.util.concurrent.TimeoutException: Ping started at 1691255008096 hasn't completed by 1691255248097
+	at hudson.remoting.PingThread.ping(PingThread.java:132)
+	at hudson.remoting.PingThread.run(PingThread.java:88)
+
+Aug 06, 2023 12:12:28 AM hudson.slaves.ChannelPinger$1 onDead
+INFO: Ping failed. Terminating the channel channel.
+java.util.concurrent.TimeoutException: Ping started at 1691255308096 hasn't completed by 1691255548097
+	at hudson.remoting.PingThread.ping(PingThread.java:132)
+	at hudson.remoting.PingThread.run(PingThread.java:88)
+
+Aug 06, 2023 12:17:28 AM hudson.slaves.ChannelPinger$1 onDead
+INFO: Ping failed. Terminating the channel channel.
+java.util.concurrent.TimeoutException: Ping started at 1691255608096 hasn't completed by 1691255848097
+	at hudson.remoting.PingThread.ping(PingThread.java:132)
+	at hudson.remoting.PingThread.run(PingThread.java:88)
+
+Aug 06, 2023 12:19:06 AM hudson.remoting.SynchronousCommandTransport$ReaderThread run
+INFO: I/O error in channel channel
+java.io.IOException: Unexpected termination of the channel
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:75)
+Caused by: java.io.EOFException
+	at java.base/java.io.ObjectInputStream$PeekInputStream.readFully(ObjectInputStream.java:2915)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.readShort(ObjectInputStream.java:3410)
+	at java.base/java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:954)
+	at java.base/java.io.ObjectInputStream.<init>(ObjectInputStream.java:392)
+	at hudson.remoting.ObjectInputStreamEx.<init>(ObjectInputStreamEx.java:49)
+	at hudson.remoting.Command.readFrom(Command.java:142)
+	at hudson.remoting.Command.readFrom(Command.java:128)
+	at hudson.remoting.AbstractSynchronousByteArrayCommandTransport.read(AbstractSynchronousByteArrayCommandTransport.java:35)
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:61)
+

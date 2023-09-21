@@ -1,0 +1,75 @@
+// Import mixins
+@import "@/assets/styles/mixins.scss";
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/*  ANT DESIGN MENU */
+
+.ant-menu-item {
+  outline: none !important;
+}
+
+.ant-menu-dark.ant-menu-submenu-popup {
+  .ant-menu-item-divider {
+    opacity: 0.2;
+  }
+}
+
+.ant-menu-submenu-popup {
+  .ant-menu-item {
+    a {
+      &:hover {
+        color: inherit;
+      }
+    }
+    &.ant-menu-item-selected {
+      background-color: $background-white;
+      a {
+        color: $text-success;
+      }
+    }
+    &.ant-menu-item-active {
+      background-color: $background-white;
+      a {
+        color: $text-success;
+      }
+    }
+  }
+}
+
+.ant-menu-inline {
+  > .ant-menu-item {
+    &::after {
+      right: unset;
+      left: 0;
+      border-color: $text-success;
+    }
+
+    &.ant-menu-item-selected {
+      background: transparent;
+      color: $text-success;
+      > a {
+        color: $text-success;
+        &:hover {
+          color: $text-success;
+        }
+      }
+    }
+
+    a {
+      &:hover {
+        color: $text-success;
+      }
+    }
+
+    &:hover {
+      color: $text-success;
+    }
+  }
+
+  .ant-menu-item-active {
+    background-color: $background-white;
+    a {
+      color: $text-success;
+    }
+  }
+}

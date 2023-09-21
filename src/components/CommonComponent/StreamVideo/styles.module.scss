@@ -1,0 +1,233 @@
+@import '@/assets/styles/mixins.scss';
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba($color: $background-success, $alpha: 0.5);
+  color: $text-white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  .title {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: $text-white;
+  }
+  .norm {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+
+.notsignal-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba($color: $background-danger, $alpha: 0.5);
+  color: $text-white;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.cavas {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.group-actions {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  span[class*='icon'] {
+    color: $text-white;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 0 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.wrapper-fullscreen {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  .block-view {
+    background-color: #161c21;
+    min-width: calc(100vw - 360px);
+    overflow: hidden;
+  }
+  .block-action {
+    min-width: 360px;
+    background-color: #252a30;
+  }
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 20px;
+    border-bottom: 1px solid #42474e;
+    .title {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      color: $text-white;
+    }
+    span[class*='icon-cancel'] {
+      color: $text-white;
+      cursor: pointer;
+    }
+  }
+  .content-view {
+    padding: 20px;
+    color: $text-white;
+    max-height: calc(100vh - 71px);
+    overflow-y: auto;
+    .sub-title {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 22px;
+      color: $text-white;
+    }
+    .label {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 20px;
+      color: rgba($color: $text-white, $alpha: 0.6);
+    }
+    .norm {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      color: $text-white;
+    }
+    hr {
+      border: 1px solid #42474e;
+    }
+  }
+  :global(.ant-form-item-label){
+    color: $text-white;
+    span {
+      color: $text-white;
+    }
+  }
+  :global(.ant-picker){
+    background-color: transparent;
+  }
+  :global(.ant-select-selector){
+    background-color: transparent !important;
+  }
+  :global(.ant-select-arrow){
+    color: $text-white;
+  }
+  :global(.ant-picker-suffix){
+    color: $text-white;
+  }
+}
+
+.pan-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -10px;
+  .pan-item {
+    width: calc(100% / 3 - 20px);
+    padding: 25px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    background-color: #42474e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 10px;
+    span[class*='icon-'] {
+      font-size: 20px;
+    }
+  }
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  .shaped-item {
+    width: 32px;
+    height: 32px;
+    background-color: #42474e;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+
+.slider {
+  min-height: 200px;
+  &:global(.ant-slider-vertical) {
+    padding: 0 2px;
+    :global(.ant-slider-handle) {
+      width: 22px;
+      height: 22px;
+      border: solid 4px #296bcd;
+      margin-left: -7px;
+    }
+  }
+  :global(.ant-slider-rail) {
+    width: 8px;
+  }
+  :global(.ant-slider-track) {
+    width: 8px;
+  }
+}
+
+.block-footer {
+  padding: 24px 20px;
+  border-top: 1px solid #42474e;
+  margin-top: 20px;
+  button {
+    width: 100%;
+  }
+}
+
+.calendar {
+  background-color: #42474e !important;
+  :global(.ant-picker-panel) {
+    background-color: #42474e !important;
+  }
+  :global(.ant-picker-content) {
+    th {
+      color: $text-white;
+    }
+    :global(.ant-picker-cell-in-view) {
+      color: $text-white;
+    }
+  }
+  :global(.ant-select-selector){
+    background-color: #252A30 !important;
+    color: $text-white;
+  }
+  :global(.ant-select-arrow){
+    color: $text-white;
+  }
+  :global(.ant-radio-group.ant-radio-group-outline){
+    display: none;
+  }
+}

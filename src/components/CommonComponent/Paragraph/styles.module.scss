@@ -1,0 +1,15 @@
+@import "@/assets/styles/mixins.scss";
+
+.toggle {
+  color: #1890ff;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.paragraph {
+  :global(.ant-typography-expand) {
+    display: none;
+  }
+}

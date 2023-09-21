@@ -1,0 +1,49 @@
+@import '@/assets/styles/mixins.scss';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/* PAGINATION */
+
+.pagination {
+  .page-link {
+    border-color: $gray-border;
+    color: $text;
+    margin-bottom: rem(10);
+    outline: none;
+    &:hover,
+    &:focus {
+      background: $default;
+      border-color: $default;
+      color: $white;
+    }
+  }
+
+  .page-item {
+    &.disabled {
+      .page-link {
+        background: $gray-lighten-more;
+      }
+    }
+
+    &.active {
+      .page-link {
+        background: $primary;
+        border-color: $primary;
+      }
+    }
+  }
+}
+
+.pager {
+  li > a {
+    border-color: $gray-darken;
+    border-radius: 3px;
+    color: $black-lighten-more;
+    outline: none;
+    &:hover,
+    &:focus {
+      background: $default;
+      border-color: $default;
+      color: $white;
+    }
+  }
+}

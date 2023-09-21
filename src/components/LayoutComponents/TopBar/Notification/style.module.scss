@@ -1,0 +1,83 @@
+@import '@/assets/styles/mixins.scss';
+
+.dropdown {
+  cursor: pointer;
+  position: relative;
+  @include transition-slow;
+  &:hover {
+    color: $blue;
+
+    &::after {
+      color: $gray-darken;
+    }
+  }
+}
+
+.activity {
+  background: $white;
+  border-radius: 5px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: rem(290);
+}
+
+.item {
+  border-bottom: 1px solid $gray-border;
+  padding: rem(10) 0 !important;
+  position: relative;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  &:hover {
+    background: $gray-lighten;
+
+    .icon {
+      background: $text-lighten;
+      border-color: $text-lighten;
+      color: $white;
+    }
+  }
+}
+
+.icon {
+  background: $gray-lighten-more;
+  border-bottom: 1px solid $gray-lighten;
+  color: $gray;
+  font-size: rem(16);
+  height: 100%;
+  left: 0;
+  padding-top: rem(12);
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: rem(40);
+}
+
+.inner {
+  margin-left: rem(50);
+  padding-right: rem(15);
+
+  label {
+    font-size: rem(12);
+  }
+}
+
+.descr {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.title {
+  > span {
+    color: $gray;
+    font-size: rem(13);
+  }
+}
+
+.bell {
+  font-size: rem(20);
+}

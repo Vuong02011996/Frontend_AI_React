@@ -1,0 +1,53 @@
+// Import mixins
+@import '@/assets/styles/mixins.scss';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/*  ANT DESIGN MODAL */
+
+.ant-modal-close {
+  outline: none !important;
+}
+
+.ant-image {
+  margin: 5px;
+  z-index: 1;
+}
+
+.container-preview-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  line-height: 0;
+  margin-right: 10px;
+  display: inline-block;
+  &:last-child {
+    margin-right: 0;
+  }
+  .ant-image {
+    margin: 0;
+  }
+  .ant-image-img {
+    opacity: 0;
+    object-fit: cover;
+  }
+}
+
+.container-image {
+  position: relative;
+  display: inline-block;
+  .background-avatar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+  }
+}
+
+.ant-modal-content {
+  border-radius: 12px;
+}

@@ -1,0 +1,119 @@
+@import '@/assets/styles/mixins.scss';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/*  CORE COMPONENTS & UTILITIES */
+
+.utils {
+  &__visibilityHidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  // main container
+  &__content {
+    margin: 0 auto;
+    max-width: rem(1560);
+    padding: rem(30);
+
+    @media (max-width: $sm-max-width) {
+      overflow-x: hidden;
+      padding: rem(30) rem(10) !important;
+    }
+  }
+
+  &__title {
+    color: $black;
+    font-size: rem(17);
+  }
+
+  &__titleDescription {
+    color: $text-lighten;
+  }
+
+  // scrollable block
+  &__scrollable {
+    overflow: auto;
+  }
+
+  // example block
+  &__example {
+    border: 1px solid $gray-border;
+    padding: rem(25);
+    &:before {
+      color: $text;
+      content: 'EXAMPLE';
+      display: block;
+      margin-bottom: rem(15);
+    }
+  }
+
+  // links
+  &__link {
+    &--underlined {
+      border-bottom: 1px solid rgba($black-lighten-more, 0.25);
+      &:hover {
+        border-bottom-color: rgba($blue, 0.2);
+      }
+    }
+
+    &--blue {
+      color: $blue;
+      &:hover {
+        color: $blue-darken;
+      }
+
+      &.link-underlined {
+        border-bottom: 1px solid rgba($blue, 0.25);
+        &:hover {
+          border-bottom-color: rgba($blue, 0.2);
+        }
+      }
+    }
+  }
+
+  // icons block
+  &__iconsBlock {
+    padding: 0 0 rem(30);
+    text-align: center;
+    p {
+      height: rem(30);
+    }
+
+    li {
+      background: $gray-lighten;
+      border-radius: 3px;
+      box-sizing: content-box;
+      display: inline-block;
+      font-size: rem(36);
+      height: rem(40);
+      line-height: rem(40);
+      margin: rem(10);
+      padding: rem(10) rem(30);
+      text-align: center;
+      width: rem(40);
+      &:hover {
+        background: $black-lighten;
+        color: $white;
+      }
+    }
+
+    .tooltip {
+      font-size: rem(18);
+    }
+  }
+
+  &__scrollTable {
+    white-space: nowrap !important;
+    .ant-table-body {
+      overflow-x: auto !important;
+    }
+  }
+}

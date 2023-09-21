@@ -1,0 +1,117 @@
+@import '@/assets/styles/mixins.scss';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/* FORMS */
+
+input::-webkit-input-placeholder {
+  color: $gray-darken !important;
+}
+
+input::-moz-placeholder {
+  color: $gray-darken !important;
+}
+
+input:-moz-placeholder {
+  color: $gray-darken !important;
+}
+
+input:-ms-input-placeholder {
+  color: $gray-darken !important;
+}
+
+.form-actions {
+  margin: rem(20) 0;
+}
+
+.form-control {
+  border-color: $gray-border;
+  color: $text;
+  padding: rem(11) rem(16);
+  &.form-control-rounded {
+    border-radius: 500px;
+  }
+
+  &:focus {
+    border-color: $primary;
+  }
+
+  &.form-control-sm {
+    padding: rem(7) rem(8);
+  }
+}
+
+.col-form-label {
+  padding-bottom: rem(9);
+  padding-top: rem(9);
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: $gray-lighten;
+}
+
+.input-group-addon {
+  background-color: $gray-lighten;
+  border-color: $gray-border;
+}
+
+span.input-group-addon {
+  outline: none !important;
+}
+
+.form-group {
+  &.has-danger {
+    .form-control {
+      border-color: $danger;
+    }
+  }
+
+  &.has-success {
+    .form-control {
+      border-color: $success;
+    }
+  }
+
+  &.has-warning {
+    .form-control {
+      border-color: $warning;
+    }
+  }
+
+  &.has-focused {
+    .form-control {
+      border-color: $primary;
+    }
+  }
+}
+
+.form-input-icon {
+  position: relative;
+  > i {
+    color: $gray-darken;
+    font-size: rem(16);
+    left: 0;
+    margin: rem(13) rem(2) rem(4) rem(10);
+    position: absolute;
+    text-align: center;
+    width: rem(16);
+    z-index: 3;
+  }
+
+  .form-control {
+    padding-left: rem(34);
+  }
+
+  &.form-input-icon-right {
+    > i {
+      left: auto;
+      margin: rem(13) rem(10) rem(4) rem(2);
+      right: rem(3);
+    }
+
+    .form-control {
+      padding-left: rem(16);
+      padding-right: rem(34);
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "dataSource": [
+    {
+      "img": "images/bg.jpg"
+    },
+    {
+      "img": "images/bg_02.jpg"
+    },
+    {
+      "img": "images/bg_03.jpg"
+    },
+    {
+      "img": "images/bg_04.jpg"
+    },
+    {
+      "img": "images/bg_05.jpg"
+    },
+    {
+      "img": "images/bg_06.jpg"
+    },
+    {
+      "img": "images/bg_07.jpg"
+    },
+    {
+      "img": "images/bg_08.jpg"
+    },
+    {
+      "img": "images/bg_09.jpg"
+    },
+    {
+      "img": "images/bg_10.jpg"
+    },
+    {
+      "img": "images/bg_11.jpg"
+    },
+    {
+      "img": "images/bg_12.jpg"
+    }
+  ]
+}

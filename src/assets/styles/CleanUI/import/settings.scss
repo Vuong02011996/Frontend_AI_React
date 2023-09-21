@@ -1,0 +1,89 @@
+@import "@/assets/styles/mixins.scss";
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/*  THEME SETTINGS STYLES */
+
+.settings {
+  &__fixedWidth {
+    margin: 0 auto;
+    max-width: 1420px;
+
+    &:not(.settings__menuTop) {
+      .utils__content {
+        padding-right: 0;
+      }
+
+      div[class^="style-module__inner"] {
+        margin-right: 0;
+      }
+
+      @media (max-width: 1445px) {
+        .utils__content {
+          padding-right: rem(30);
+        }
+
+        div[class^="style-module__inner"] {
+          margin-right: rem(30);
+        }
+      }
+    }
+
+    &.settings__menuTop {
+      .utils__content {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      div[class^="style-module__inner"] {
+        margin: 0;
+      }
+
+      @media (max-width: 1445px) {
+        .utils__content {
+          padding-left: rem(30);
+          padding-right: rem(30);
+        }
+
+        div[class^="style-module__inner"] {
+          margin: 0 rem(30);
+        }
+      }
+    }
+  }
+
+  &__squaredBorders {
+    .card {
+      border-radius: 0;
+    }
+  }
+
+  &__menuShadow {
+    .ant-layout-sider {
+      box-shadow: 0 0 100px 1px rgba(57, 55, 73, 0.15);
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__borderLess {
+    .card {
+      border: 0;
+    }
+
+    .card-header {
+      border-bottom: 0;
+      padding-bottom: 0;
+      padding-top: rem(20);
+    }
+
+    .card-footer {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .utils__title {
+      font-size: rem(16);
+      text-transform: uppercase;
+    }
+  }
+}

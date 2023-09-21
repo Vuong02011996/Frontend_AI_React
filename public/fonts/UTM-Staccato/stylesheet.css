@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'UTM Staccato';
+    src: url('UTMStaccato.eot');
+    src: url('UTMStaccato.eot?#iefix') format('embedded-opentype'),
+        url('UTMStaccato.woff2') format('woff2'),
+        url('UTMStaccato.woff') format('woff'),
+        url('UTMStaccato.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

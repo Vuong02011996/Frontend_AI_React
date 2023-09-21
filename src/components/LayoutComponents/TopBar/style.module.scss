@@ -1,0 +1,14 @@
+@import '@/assets/styles/mixins.scss';
+
+.topbar {
+  align-items: center;
+  background: $white;
+  border-bottom: 1px solid $gray-border;
+  color: $text;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 60px;
+  min-height: 60px;
+  padding: 0 rem(20);
+}

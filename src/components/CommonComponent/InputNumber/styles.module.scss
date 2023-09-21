@@ -1,0 +1,41 @@
+@import '@/assets/styles/mixins.scss';
+
+.wrapper-container {
+  display: flex;
+  align-items: center;
+  .number {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    color: $text;
+    width: 50px;
+    text-align: center;
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 44px;
+    border: 1.5px solid #eaeaea;
+    border-radius: 2px;
+    background-color: $background-white;
+    color: $text-success;
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: $sm-min-width) {
+  .wrapper-container {
+    .number {
+      font-size: 16px;
+      line-height: 24px;
+      width: 30px;
+    }
+    .button {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}

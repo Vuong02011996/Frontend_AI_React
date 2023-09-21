@@ -1,0 +1,21 @@
+@import '@/assets/styles/mixins.scss';
+.ant-tabs {
+  .ant-tabs-ink-bar {
+    background: $background-success;
+  }
+  .ant-tabs-tab-btn {
+    &:hover {
+      color: $text-success;
+    }
+  }
+  .ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: $text-success;
+    font-weight: unset;
+  }
+}
+
+.table-edit-wrapper {
+  .editable-cell-value-wrap {
+    margin: -9px -16px !important;
+  }
+}

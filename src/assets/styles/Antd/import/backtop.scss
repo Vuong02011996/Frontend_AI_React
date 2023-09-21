@@ -1,0 +1,19 @@
+// Import mixins
+@import '@/assets/styles/mixins.scss';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/*  ANT DESIGN BACKTOP */
+
+.ant-back-top {
+  bottom: rem(50);
+  right: rem(50);
+}
+
+.ant-back-top-content {
+  background: $gray;
+  border-radius: 5px;
+
+  &:hover {
+    background: $gray-darken;
+  }
+}

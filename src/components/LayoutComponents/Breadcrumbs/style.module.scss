@@ -1,0 +1,35 @@
+@import "@/assets/styles/mixins.scss";
+
+.breadcrumbs {
+  :global(.text-muted) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    color: #7a7e84;
+  }
+}
+
+.path {
+  font-size: rem(18);
+  color: $black;
+}
+
+.arrow {
+  display: inline-block;
+  margin: 0 rem(10);
+  &:after {
+    display: inline-block;
+    content: "\e91b";
+    font-family: "icomoon";
+    color: #7a7e84;
+    font-size: 12px;
+  }
+}
+.title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  color: #3e4247;
+}

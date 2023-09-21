@@ -1,0 +1,76 @@
+@import '@/assets/styles/mixins.scss';
+
+.login {
+  background-color: $gray-lighten-more;
+  background-position: center center;
+  background-size: cover;
+}
+
+.logo-container {
+  margin-bottom: 40px;
+}
+
+.title {
+  margin: 0 auto;
+  max-width: rem(740);
+  padding-left: rem(20);
+  padding-right: rem(20);
+  text-align: center;
+  font-weight: bold;
+  color: $text-success;
+  margin-bottom: 20px;
+}
+
+.block {
+  align-self: center;
+  padding: rem(40) rem(40) rem(80);
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: $md-max-width) {
+    padding: rem(20);
+  }
+}
+
+.inner {
+  background-color: $white;
+  border-radius: 10px;
+  margin: 0 auto;
+  max-width: 400px;
+  min-width: 400px;
+  overflow: hidden;
+  padding: 10px 48px 28px 48px;
+  position: relative;
+
+  @media (max-width: $md-max-width) {
+    padding: 10px 20px 10px 20px;
+    max-width: 340px;
+    min-width: 340px;
+  }
+}
+
+.form {
+  position: relative;
+  z-index: 2;
+}
+
+.button {
+  height: 44px;
+  border-radius: 6px;
+  background-color: $background-success;
+  width: 100%;
+  border: 1px solid $border-success;
+  box-shadow: 0 0 10px -2px rgba($color: $background-success, $alpha: 1);
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $background-success;
+    border: 1px solid $border-success;
+    color: $text-white;
+  }
+}

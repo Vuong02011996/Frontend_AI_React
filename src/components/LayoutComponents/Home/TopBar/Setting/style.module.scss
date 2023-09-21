@@ -1,0 +1,103 @@
+@import "@/assets/styles/mixins.scss";
+
+.dropdown {
+  cursor: pointer;
+  position: relative;
+  @include transition-slow;
+  display: flex;
+  align-items: center;
+  &:hover {
+    color: $blue;
+
+    &::after {
+      color: $gray-darken;
+    }
+  }
+}
+
+.activity {
+  background: $white;
+  border-radius: 5px;
+  margin: 0;
+  padding: 10px;
+  width: rem(630);
+  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.2);
+}
+
+.setting {
+  font-size: rem(20);
+  color: $text-white;
+}
+
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  max-height: 70vh;
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f4f4f4;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $background-success;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .images-item {
+    width: calc(100% / 4);
+    padding: 10px;
+    cursor: pointer;
+    &.active {
+      .image {
+        position: relative;
+        border: 4px solid $border-success;
+        img {
+          border-radius: 0;
+        }
+        &::before {
+          content: "\ea10";
+          font-family: "icomoon" !important;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          color: $text-white;
+          z-index: 99;
+          font-size: 26px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+  }
+  .image {
+    width: 130px;
+    height: 130px;
+    border-radius: 8px;
+    img {
+      width: 100%;
+      border-radius: 8px;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

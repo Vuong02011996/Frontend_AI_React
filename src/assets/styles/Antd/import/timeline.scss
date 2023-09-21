@@ -1,0 +1,16 @@
+@import '@/assets/styles/mixins.scss';
+
+.ant-timeline {
+  .ant-timeline-item {
+    &-last {
+      padding-bottom: 0 !important;
+    }
+  }
+}
+
+.fc-event-main {
+  background-color: $background-success;
+  .fc-event-title {
+    color: $text-white;
+  }
+}

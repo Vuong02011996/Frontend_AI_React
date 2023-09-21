@@ -1,0 +1,28 @@
+.loader {
+  align-items: center;
+  background: #f2f4f8;
+  border-radius: 20px;
+  bottom: 0;
+  display: flex;
+  height: 180px;
+  justify-content: center;
+  left: 50%;
+  margin-left: -90px;
+  margin-top: -110px;
+  opacity: 1;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 180px;
+  z-index: 1;
+
+  &.fullScreen {
+    position: fixed;
+  }
+
+  &.hidden {
+    opacity: 0;
+    transition: opacity 1s ease 0.5s, z-index 0.1s ease 1.5s;
+    z-index: -1;
+  }
+}

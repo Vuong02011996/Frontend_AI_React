@@ -1,0 +1,105 @@
+@import '@/assets/styles/mixins.scss';
+
+@for $i from 0 through 100 {
+  $value: $i * 5;
+  $unit: '';
+  @if $i != 0 {
+    $unit: 'px';
+  }
+  .max-width-#{$i*5} {
+    max-width: #{$value}#{$unit};
+  }
+}
+@for $i from 0 through 100 {
+  $value: $i * 5;
+  $unit: '';
+  @if $i != 0 {
+    $unit: 'px';
+  }
+  .col-fixed-#{$i*5} {
+    width: #{$value}#{$unit};
+  }
+}
+@for $i from 0 through 300 {
+  $value: $i * 5;
+  $unit: '';
+  @if $i != 0 {
+    $unit: 'px';
+  }
+  .min-width-#{$i*5} {
+    min-width: #{$value}#{$unit};
+  }
+  .min-parent-width-#{$i*5} {
+    width: #{$value}#{$unit};
+  }
+}
+
+.min-width-stt {
+  min-width: 46px;
+  white-space: nowrap;
+}
+
+.ant-table-content {
+  table {
+    width: auto !important;
+  }
+}
+
+.table-edit {
+  .ant-table-empty {
+    .ant-table-tbody {
+      display: none;
+    }
+  }
+  .ant-table-cell {
+    position: relative;
+    .editable-cell-value-wrap {
+      min-height: 50px;
+      margin: -8px -16px;
+      padding: 16px;
+    }
+  }
+  .ant-table-content {
+    table {
+      width: 100% !important;
+    }
+  }
+  .ant-table-row-expand-icon {
+    display: none;
+  }
+  .ant-table-row-indent {
+    display: none;
+  }
+}
+
+.row-dragging {
+  background: #fafafa;
+  border: 1px solid rgba($color: #ccc, $alpha: 0.5);
+  z-index: 999999;
+  box-shadow: 0 0 2px -2px rgba($color: #000000, $alpha: 0.25);
+}
+
+.row-dragging td {
+  padding: 5px 10px 0 !important;
+  background: #fafafa;
+}
+
+.row-dragging .drag-visible {
+  visibility: visible;
+}
+
+.table-transfer {
+  table {
+    width: 100% !important;
+  }
+}
+
+.table-normal {
+  th {
+    background-color: $background-white !important;
+    font-weight: bold !important;
+    font-size: 14px;
+    line-height: 20px;
+    color: $text;
+  }
+}

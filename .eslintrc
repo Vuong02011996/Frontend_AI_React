@@ -1,0 +1,79 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier", "plugin:node/recommended", "plugin:security/recommended"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "IMAGE_URL": true,
+    "API_URL": true,
+    "NOTIFICATION_APP_ID": true,
+    "CLIENT_SECRET": true,
+    "CLIENT_ID": true,
+    "API_UPLOAD": true,
+    "API_URL_LAVAREL": true,
+    "API_SSO_URL": true,
+    "API_URL_LAVAREL_CLOVER": true,
+    "API_URL_NET": true,
+    "API_URL_AI": true,
+    "NodePlayer": true
+  },
+  "rules": {
+    "react/jsx-wrap-multilines": 0,
+    "react/prop-types": "error",
+    "react/forbid-prop-types": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "import/no-unresolved": [
+      2,
+      {
+        "ignore": ["^@/", "^umi/"]
+      }
+    ],
+    "linebreak-style": 0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "spaced-comment": 0,
+    "no-script-url": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "react/prefer-stateless-function": 0,
+    "react/no-danger": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-filename-extension": [
+      0,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/destructuring-assignment": [0, "always"],
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false,
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "import/prefer-default-export": 0,
+    "semi": 2,
+    "react/no-array-index-key": 0,
+    "camelcase": 0,
+    "no-shadow": 0,
+    "react/sort-comp": 0,
+    "node/no-unsupported-features/es-syntax": 0,
+    "node/no-missing-import": 0,
+    "security/detect-object-injection": 0,
+    "import/no-extraneous-dependencies": 0,
+    "node/no-extraneous-import": 0,
+    "react/jsx-props-no-spreading": 0,
+    "no-console": "error"
+  },
+  "settings": {
+    "polyfills": ["fetch", "promises", "url"]
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "plugins": ["react"]
+}

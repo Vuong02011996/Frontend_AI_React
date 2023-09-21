@@ -1,0 +1,132 @@
+@import "~bootstrap-css-only/css/bootstrap.min.css";
+@import "~react-quill/dist/quill.snow.css";
+@import "assets/styles/Antd/antd.cleanui";
+@import "assets/styles/CleanUI/cleanui";
+@import "assets/styles/Bootstrap/bootstrap.cleanui";
+@import "assets/styles/Chartist/chartist.cleanui";
+@import "assets/styles/Nprogress/nprogress.cleanui";
+@import "assets/styles/Rcdrawer/rcdrawer.cleanui";
+@import "assets/styles/mixins.scss";
+@import "~c3/c3.min.css";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import "~animate.css/animate.min.css";
+@import "assets/styles/utils";
+@import "~swiper/swiper.min.css";
+@import "~react-summernote/dist/react-summernote.css";
+@import "~bootstrap/dist/css/bootstrap.css";
+
+#root {
+  overflow: auto;
+}
+
+html {
+  overflow: auto;
+}
+
+body {
+  font-family: "Proxima Nova";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.letu-nav {
+  position: fixed;
+  right: 13px;
+  width: auto;
+  z-index: 150;
+  bottom: 0px;
+  padding: 10px 0;
+  .text {
+    display: none;
+    font-size: 12px;
+    line-height: 16px;
+    color: $text;
+  }
+  ul {
+    list-style: none;
+    img {
+      width: 45px;
+      height: 45px;
+      object-fit: revert;
+    }
+    li {
+      margin: 20px 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .letu-nav {
+    position: fixed;
+    bottom: 0;
+    right: 0px;
+    left: 0;
+    padding: 5px 0 0 0;
+    background-color: $background-white;
+    .text {
+      display: block;
+      margin-top: 4px;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 15px;
+      img {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+      }
+      li {
+        margin: 0px 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.ql-align-center {
+  text-align: center;
+}
+
+.ql-align-left {
+  text-align: left;
+}
+
+.ql-align-right {
+  text-align: left;
+}
+
+.ql-video {
+  width: 100%;
+  height: 600px;
+}
+
+.fullscreen {
+  background-color: $background-white !important;
+}
+
+.note-toolbar {
+  padding: 10px !important;
+  border-bottom: 1px solid $border-line;
+  .btn-default {
+    background-color: rgba($color: $background-success, $alpha: 0.8);
+    border: rgba($color: $background-success, $alpha: 0.8);
+  }
+}
+
+.note-modal {
+  .modal-body {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+  .modal-header {
+    button {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      font-size: 20px;
+    }
+  }
+}

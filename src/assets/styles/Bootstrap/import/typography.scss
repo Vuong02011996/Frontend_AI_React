@@ -1,0 +1,28 @@
+@import '@/assets/styles/mixins.scss';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/* TYPOGRAPHY */
+
+.mark,
+mark {
+  background: $orange;
+  color: $white;
+}
+
+.blockquote {
+  background: $gray-lighten-more;
+  border-left: 3px solid $gray;
+  font-size: rem(15);
+  padding: 30px;
+
+  &-reverse {
+    border-left: 0;
+    border-right: 3px solid $gray;
+    text-align: right;
+  }
+
+  &-footer {
+    color: $gray-darken;
+    margin-top: rem(20);
+  }
+}
